@@ -1,5 +1,5 @@
 
-FROM ubuntu:focal
+FROM ubuntu:bionic
 COPY Dockerfile.minios-live.0@install.sh /opt/install.sh
 RUN chmod +x /opt/install.sh
 RUN /opt/install.sh
