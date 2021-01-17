@@ -1,0 +1,15 @@
+FROM ubuntu:bionic
+COPY Dockerfile.minios-live.0@install.sh /opt/install.sh
+RUN chmod +x /opt/install.sh
+RUN /opt/install.sh
+RUN rm /opt/install.sh
+ENV LOGPATH="/var/log"
+ENV BUILD_TEST_ISO="0"
+ENV DEV_SYSTEM="0"
+ENV CREATE_BACKUP="0"
+ENV DEBIAN_FRONTEND_TYPE="noninteractive"
+ENV APT_CMD="apt-get"
+ENV APT_OPTIONS="-y"
+VOLUME /build
+WORKDIR /build
+CMD ["/build/minios-live/autoinstall", "-"]
