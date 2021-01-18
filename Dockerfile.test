@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:xenial
 COPY Dockerfile.minios-live.1@install.sh /opt/install.sh
 RUN chmod +x /opt/install.sh
 RUN /opt/install.sh
