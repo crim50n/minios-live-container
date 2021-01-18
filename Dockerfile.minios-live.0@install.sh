@@ -16,7 +16,7 @@ cd /opt/
 wget -c http://ru.archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.123ubuntu2_all.deb
 dpkg -i /opt/debootstrap_1.0.123ubuntu2_all.deb
 rm -f /opt/debootstrap_1.0.123ubuntu2_all.deb
-cat <<'EOF' >/usr/share/debootstrap/functions.diff
+: 'cat <<'EOF' >/usr/share/debootstrap/functions.diff
 --- functions	2020-10-23 20:42:16.000000000 +0300
 +++ functions.new	2021-01-16 23:22:25.612064306 +0300
 @@ -1176,7 +1176,9 @@
@@ -33,7 +33,7 @@ cat <<'EOF' >/usr/share/debootstrap/functions.diff
 
 EOF
 cd /usr/share/debootstrap/
-patch </usr/share/debootstrap/functions.diff
+patch </usr/share/debootstrap/functions.diff '
 apt-get clean
 find /var/log/ -type f | xargs rm -f
 rm -f /var/backups/*
