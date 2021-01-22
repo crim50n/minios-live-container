@@ -9,7 +9,7 @@ trap '_failure ${LINENO} "$BASH_COMMAND"' ERR
 # ############################################################################ #
 
 apt-get update -y
-apt-get install -y wget sudo debootstrap xorriso
+apt-get install -y wget sudo debootstrap xorriso binutils squashfs-tools grub-pc-bin grub-efi-amd64-bin
 touch /.minios-live-container
 apt-get clean
 find /var/log/ -type f | xargs rm -f
