@@ -1,6 +1,0 @@
-FROM ubuntu:xenial
-COPY Dockerfile.minios-live.1@install.sh /opt/install.sh
-RUN chmod +x /opt/install.sh && /opt/install.sh && rm /opt/install.sh
-VOLUME /build
-WORKDIR /build/minios-live
-CMD ["/build/minios-live/autoinstall", "-"]
