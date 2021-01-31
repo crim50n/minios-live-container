@@ -21,7 +21,7 @@ rm -f /var/cache/apt/archives/*.deb
 rm -f /var/cache/apt/*.bin
 rm -f /var/cache/debconf/*-old
 rm -f /var/lib/apt/extended_states
-rm -f /var/lib/apt/lists/*Packages
+rm -f /var/lib/apt/lists/*Packages*
 rm -f /var/lib/apt/lists/*Translation*
 rm -f /var/lib/apt/lists/*InRelease
 rm -f /var/lib/apt/lists/deb.*
